@@ -1,0 +1,243 @@
+{
+    "_comment": "DO NOT EDIT: FILE GENERATED AUTOMATICALLY BY PELICAN PANEL",
+    "meta": {
+        "version": "PLCN_v3",
+        "update_url": null
+    },
+    "name": "DarkRP.xyz s&box Game Server",
+    "author": "contact@mydriss.fr",
+    "uuid": "a8f5e1c0-4b3d-4e9a-9c7b-8f5d1e2c3a4b",
+    "description": "s&box dedicated server using a custom runtime image with baked Wine + Windows .NET. Configured for DarkRP.xyz Cloud Sync.",
+    "image": "data:image/jpeg;base64,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",
+    "tags": [],
+    "features": [],
+    "docker_images": {
+        "ghcr.io/mydrissjlv/sbox-darkrp.xyz-server-egg:latest": "ghcr.io/mydrissjlv/sbox-darkrp.xyz-server-egg:latest"
+    },
+    "file_denylist": [],
+    "startup_commands": {
+        "Default": "start-sbox +game mydriss.darkrp {{MAP}} +server_key \\\"{{SERVER_KEY}}\\\" +owner_steamid \\\"{{OWNER_STEAMID}}\\\" +server_id \\\"{{SERVER_ID}}\\\" +server_name \\\"{{SERVER_NAME}}\\\" +server_description \\\"{{SERVER_DESCRIPTION}}\\\" +net_game_server_token \\\"{{STEAM_TOKEN}}\\\" +maxplayers {{MAX_PLAYERS}} +tickrate {{TICKRATE}} {{SBOX_EXTRA_ARGS}}"
+    },
+    "config": {
+        "files": "{}",
+        "startup": "{\n    \"done\": \"Loading game|Server started\"\n}",
+        "logs": "{\n    \"custom\": true,\n    \"location\": \"logs\\/*.log\"\n}",
+        "stop": "^C"
+    },
+    "scripts": {
+        "installation": {
+            "script": "#!/bin/sh\nmkdir -p /mnt/server/projects\n",
+            "container": "alpine:3",
+            "entrypoint": "ash"
+        }
+    },
+    "variables": [
+        {
+            "sort": 12,
+            "name": "Direct Connect (No Steam Relay)",
+            "description": "Allow direct connection via IP+Port without Steam relay (0=Steam relay enabled, 1=Direct IP connection enabled).",
+            "env_variable": "ENABLE_DIRECT_CONNECT",
+            "default_value": "0",
+            "user_viewable": false,
+            "user_editable": false,
+            "rules": [
+                "required",
+                "in:0,1"
+            ]
+        },
+        {
+            "sort": 3,
+            "name": "Map",
+            "description": "Optional map/package identifier loaded after +game. Leave blank to use the game default (for example: facepunch.flatgrass).",
+            "env_variable": "MAP",
+            "default_value": "",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": [
+                "nullable",
+                "string",
+                "max:128"
+            ]
+        },
+        {
+            "sort": 4,
+            "name": "Max Players",
+            "description": "Maximum number of players allowed on the server.",
+            "env_variable": "MAX_PLAYERS",
+            "default_value": "32",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": [
+                "nullable",
+                "numeric"
+            ]
+        },
+        {
+            "sort": 5,
+            "name": "Owner SteamID",
+            "description": "Your Steam64 ID for in-game superadmin rights.",
+            "env_variable": "OWNER_STEAMID",
+            "default_value": "",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": [
+                "nullable",
+                "string",
+                "max:32"
+            ]
+        },
+        {
+            "sort": 10,
+            "name": "Auto Update",
+            "description": "Run a SteamCMD update check on every container boot (1=enabled, 0=disabled).",
+            "env_variable": "SBOX_AUTO_UPDATE",
+            "default_value": "1",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": [
+                "required",
+                "in:0,1"
+            ]
+        },
+        {
+            "sort": 13,
+            "name": "Branch",
+            "description": "Optional Steam beta branch name used for updates (for example: staging).",
+            "env_variable": "SBOX_BRANCH",
+            "default_value": "",
+            "user_viewable": false,
+            "user_editable": false,
+            "rules": [
+                "nullable",
+                "string",
+                "max:64"
+            ]
+        },
+        {
+            "sort": 11,
+            "name": "Extra Args",
+            "description": "Optional extra launch arguments appended to sbox-server.exe. Use with caution.",
+            "env_variable": "SBOX_EXTRA_ARGS",
+            "default_value": "",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": [
+                "nullable",
+                "string",
+                "max:512"
+            ]
+        },
+        {
+            "sort": 14,
+            "name": "SteamCMD Timeout (seconds)",
+            "description": "Maximum time to wait for each SteamCMD probe/update call.",
+            "env_variable": "SBOX_STEAMCMD_TIMEOUT",
+            "default_value": "600",
+            "user_viewable": false,
+            "user_editable": false,
+            "rules": [
+                "required",
+                "numeric",
+                "between:0,7200"
+            ]
+        },
+        {
+            "sort": 2,
+            "name": "Server Description",
+            "description": "A short description of the server.",
+            "env_variable": "SERVER_DESCRIPTION",
+            "default_value": "Welcome to DarkRP.xyz | \u03a3YDRISS",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": [
+                "nullable",
+                "string",
+                "max:255"
+            ]
+        },
+        {
+            "sort": 7,
+            "name": "Server ID",
+            "description": "Cloud syncing server ID. Get it at: https://darkrp.xyz/dashboard",
+            "env_variable": "SERVER_ID",
+            "default_value": "",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": [
+                "nullable",
+                "string",
+                "max:128"
+            ]
+        },
+        {
+            "sort": 8,
+            "name": "Server Key",
+            "description": "DarkRP Server Key. Get it at: https://darkrp.xyz/dashboard",
+            "env_variable": "SERVER_KEY",
+            "default_value": "",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": [
+                "nullable",
+                "string",
+                "max:128"
+            ]
+        },
+        {
+            "sort": 1,
+            "name": "Server Name",
+            "description": "Public server name shown in the s&box server browser and listings.",
+            "env_variable": "SERVER_NAME",
+            "default_value": "DarkRP.xyz | \u03a3YDRISS",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": [
+                "nullable",
+                "string",
+                "max:128"
+            ]
+        },
+        {
+            "sort": 6,
+            "name": "Steam Game Token",
+            "description": "Steam game server token. Get it at: https://steamcommunity.com/dev/managegameservers (AppID: 590830)",
+            "env_variable": "STEAM_TOKEN",
+            "default_value": "",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": [
+                "nullable",
+                "string",
+                "max:255"
+            ]
+        },
+        {
+            "sort": 9,
+            "name": "Tickrate",
+            "description": "Server simulation frequency. Higher values improve physics but increase CPU usage (Default: 60).",
+            "env_variable": "TICKRATE",
+            "default_value": "60",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": [
+                "required",
+                "numeric",
+                "between:10,128"
+            ]
+        },
+        {
+            "sort": 15,
+            "name": "Windows .NET Version",
+            "description": "Informational only: Windows .NET runtime version.",
+            "env_variable": "WIN_DOTNET_VERSION",
+            "default_value": "10.0.0",
+            "user_viewable": false,
+            "user_editable": false,
+            "rules": [
+                "required",
+                "string",
+                "max:32"
+            ]
+        }
+    ]
+}
