@@ -436,6 +436,14 @@ run_sbox() {
 
     project_target="$(resolve_project_target)"
 
+    if ! cli_has_flag "+maxplayers" && [ -n "${MAX_PLAYERS}" ] && [ "${MAX_PLAYERS}" -gt 0 ]; then
+        args+=( +maxplayers "${MAX_PLAYERS}" )
+    fi
+
+    if ! cli_has_flag "+tickrate" && [ -n "${TICKRATE}" ] && [ "${TICKRATE}" -gt 0 ]; then
+        args+=( +tickrate "${TICKRATE}" )
+    fi
+
     local cli_has_game=0
     for arg in "${cli_args[@]}"; do
         if [ "${arg}" = "+game" ]; then
@@ -515,15 +523,6 @@ run_sbox() {
     else
         log_error "Missing startup target! GAME variable is empty and no local project found."
         exit 1
-    fi
-
-
-    if ! cli_has_flag "+maxplayers" && [ -n "${MAX_PLAYERS}" ] && [ "${MAX_PLAYERS}" -gt 0 ]; then
-        args+=( +maxplayers "${MAX_PLAYERS}" )
-    fi
-
-    if ! cli_has_flag "+tickrate" && [ -n "${TICKRATE}" ] && [ "${TICKRATE}" -gt 0 ]; then
-        args+=( +tickrate "${TICKRATE}" )
     fi
 
     if [ -z "${resolved_server_name}" ] && [ -n "${HOSTNAME_FALLBACK}" ] && [[ ! "${HOSTNAME_FALLBACK}" =~ ^[0-9a-f]{12,64}$ ]]; then
