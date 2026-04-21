@@ -491,17 +491,6 @@ run_sbox() {
         
         ln -sfn "${project_target}" "${SBOX_INSTALL_DIR}/${GAME}" || log_error "Failed to create symlink!"
         
-        if [ -n "${MAX_PLAYERS}" ] && [ "${MAX_PLAYERS}" -gt 0 ]; then
-            log_info "Synchronizing .sbproj MaxPlayers metadata to ${MAX_PLAYERS}..."
-            local sbproj_file
-            sbproj_file=$(find "${project_target}" -maxdepth 1 -name "*.sbproj" -print -quit)
-            if [ -f "${sbproj_file}" ]; then
-                jq ".Metadata.MaxPlayers = ${MAX_PLAYERS}" "${sbproj_file}" > "${sbproj_file}.tmp" && mv "${sbproj_file}.tmp" "${sbproj_file}"
-            else
-                log_warn "No .sbproj found in ${project_target} to sync MaxPlayers."
-            fi
-        fi
-        
         local scene_local_path="${project_target}/Assets/scenes/darkrp.scene"
         local scene_cloud_path
         
