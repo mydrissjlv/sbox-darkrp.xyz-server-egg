@@ -436,8 +436,8 @@ run_sbox() {
 
     project_target="$(resolve_project_target)"
 
-    if ! cli_has_flag "+maxplayers" && [ -n "${MAX_PLAYERS}" ] && [ "${MAX_PLAYERS}" -gt 0 ]; then
-        args+=( +maxplayers "${MAX_PLAYERS}" )
+    if ! cli_has_flag "+maxplayers" && ! cli_has_flag "-maxplayers" && [ -n "${MAX_PLAYERS}" ] && [ "${MAX_PLAYERS}" -gt 0 ]; then
+        args+=( -maxplayers "${MAX_PLAYERS}" )
     fi
 
     if ! cli_has_flag "+tickrate" && [ -n "${TICKRATE}" ] && [ "${TICKRATE}" -gt 0 ]; then
