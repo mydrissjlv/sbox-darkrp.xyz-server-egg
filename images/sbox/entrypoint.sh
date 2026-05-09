@@ -432,23 +432,6 @@ run_sbox() {
     local skip_next=0
     local cli_arg=""
 
-    if [ ! -f "${SBOX_SERVER_EXE}" ]; then
-        log_error "${SBOX_SERVER_EXE} was not found. Cannot start S&Box server."
-        log_info "try deleting the /sbox folder to trigger a reseed from the prebaked template."
-        exit 1
-    fi
-
-    project_target="$(resolve_project_target)"
-
-    if ! cli_has_flag "+maxplayers" && [ -n "${MAX_PLAYERS}" ] && [ "${MAX_PLAYERS}" -gt 0 ]; then
-        args+=( +maxplayers "${MAX_PLAYERS}" )
-    fi
-
-    if ! cli_has_flag "+tickrate" && [ -n "${TICKRATE}" ] && [ "${TICKRATE}" -gt 0 ]; then
-        args+=( +tickrate "${TICKRATE}" )
-    fi
-
-    local cli_has_game=0
     for arg in "${cli_args[@]}"; do
         if [ "${arg}" = "+game" ]; then
             cli_has_game=1
@@ -474,6 +457,22 @@ run_sbox() {
         done
         return 1
     }
+
+    if [ ! -f "${SBOX_SERVER_EXE}" ]; then
+        log_error "${SBOX_SERVER_EXE} was not found. Cannot start S&Box server."
+        log_info "try deleting the /sbox folder to trigger a reseed from the prebaked template."
+        exit 1
+    fi
+
+    project_target="$(resolve_project_target)"
+
+    if ! cli_has_flag "+maxplayers" && [ -n "${MAX_PLAYERS}" ] && [ "${MAX_PLAYERS}" -gt 0 ]; then
+        args+=( +maxplayers "${MAX_PLAYERS}" )
+    fi
+
+    if ! cli_has_flag "+tickrate" && [ -n "${TICKRATE}" ] && [ "${TICKRATE}" -gt 0 ]; then
+        args+=( +tickrate "${TICKRATE}" )
+    fi
 
     local launch_map="${MAP}"
     if [ -z "${launch_map}" ] && ! cli_has_flag "+map"; then
