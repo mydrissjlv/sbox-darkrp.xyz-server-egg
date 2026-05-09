@@ -25,6 +25,10 @@ TOKEN="${TOKEN:-}"
 SBOX_PROJECT="${SBOX_PROJECT:-}"
 SBOX_PROJECTS_DIR="/home/container/projects"
 SBOX_EXTRA_ARGS="${SBOX_EXTRA_ARGS:-}"
+SERVER_STARTUP_SCENE="${SERVER_STARTUP_SCENE:-yourscene.scene}"
+if [[ ! "${SERVER_STARTUP_SCENE}" =~ ^assets/scenes/ ]]; then
+    SERVER_STARTUP_SCENE="assets/scenes/${SERVER_STARTUP_SCENE}"
+fi
 
 SERVER_PID=""
 
@@ -553,6 +557,9 @@ run_sbox() {
     fi
     if ! cli_has_flag "+server_description" && [ -n "${SERVER_DESCRIPTION:-}" ]; then
         args+=( +server_description "${SERVER_DESCRIPTION}" )
+    fi
+    if ! cli_has_flag "+server_startup_scene" && [ -n "${SERVER_STARTUP_SCENE:-}" ]; then
+        args+=( +server_startup_scene "${SERVER_STARTUP_SCENE}" )
     fi
 
     if [ -n "${SBOX_EXTRA_ARGS}" ]; then
