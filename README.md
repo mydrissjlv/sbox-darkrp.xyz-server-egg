@@ -1,5 +1,5 @@
 # DarkRP.xyz s&box Server Egg
-
+![DarkRP.xyz](https://cdn.sbox.game/upload/b/565402c1/3c5e/4766/a8bb/97d314707eba.png)
 ---
 
 ## 🇺🇸 English Version
