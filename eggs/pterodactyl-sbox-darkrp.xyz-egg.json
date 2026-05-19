@@ -13,7 +13,7 @@
         "ghcr.io/mydrissjlv/sbox-darkrp.xyz-server-egg:latest": "ghcr.io/mydrissjlv/sbox-darkrp.xyz-server-egg:latest"
     },
     "file_denylist": [],
-    "startup": "start-sbox +game mydriss.darkrp {{MAP}} +server_key \"{{SERVER_KEY}}\" +owner_steamid \"{{OWNER_STEAMID}}\" +server_id \"{{SERVER_ID}}\" +server_name \"{{SERVER_NAME}}\" +server_description \"{{SERVER_DESCRIPTION}}\" +net_game_server_token \"{{STEAM_TOKEN}}\" +maxplayers {{MAX_PLAYERS}} +tickrate {{TICKRATE}} {{SBOX_EXTRA_ARGS}}",
+    "startup": "start-sbox +game mydriss.darkrp {{MAP}} +server_startup_scene \"{{SERVER_STARTUP_SCENE}}\" +server_key \"{{SERVER_KEY}}\" +owner_steamid \"{{OWNER_STEAMID}}\" +server_id \"{{SERVER_ID}}\" +server_name \"{{SERVER_NAME}}\" +server_description \"{{SERVER_DESCRIPTION}}\" +net_game_server_token \"{{STEAM_TOKEN}}\" +maxplayers {{MAX_PLAYERS}} +tickrate {{TICKRATE}} {{SBOX_EXTRA_ARGS}}",
     "config": {
         "files": "{}",
         "startup": "{\"done\": \"Loading game|Server started\"}",
@@ -66,6 +66,16 @@
             "user_viewable": true,
             "user_editable": true,
             "rules": "nullable|string|max:128",
+            "field_type": "text"
+        },
+        {
+            "name": "Server Startup Scene",
+            "description": "The specific scene file to load on startup (e.g., assets/scenes/yourscene.scene). Use this to load your custom server scene without it being overwritten by updates.",
+            "env_variable": "SERVER_STARTUP_SCENE",
+            "default_value": "yourscene.scene",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "required|string|max:128",
             "field_type": "text"
         },
         {
