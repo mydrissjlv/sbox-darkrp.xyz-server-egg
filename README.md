@@ -78,10 +78,9 @@ s&box est très stable. Nous recommandons **un seul redémarrage toutes les 24 h
 ---
 
 ## 🐳 Docker Image
-Image stockée sur : `ghcr.io/mydrissjlv/sbox-darkrp.xyz-server-egg:latest`
+`ghcr.io/mydrissjlv/sbox-darkrp.xyz-server-egg:latest`
 
 ## 📄 License
-
 This project is proprietary. © 2026 Mydriss. All rights reserved.
 Redistribution, modification, or re-uploading of this project is strictly prohibited without explicit permission.
 
